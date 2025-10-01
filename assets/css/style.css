@@ -36,6 +36,28 @@ body {
     margin: 0 auto;
 }
 
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-logo {
+    height: 50px;
+    width: auto;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-logo {
+    height: 50px;
+    width: auto;
+}
+
 .nav-brand h2 {
     color: #2c3e50;
     font-weight: 600;
@@ -863,4 +885,109 @@ body {
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Team Member Styles */
+.team-leader {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.member-description {
+    text-align: left;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.member-description p {
+    margin-bottom: 0.5rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Tools Section */
+.tools-section {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tool-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.tool-item:hover {
+    transform: translateY(-5px);
+}
+
+.tool-icon {
+    color: #c8996b;
+    margin-bottom: 1rem;
+}
+
+.tool-item h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.tool-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Benefits Section */
+.benefits-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.benefit-item i {
+    color: #c8996b;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    flex-shrink: 0;
+}
+
+.benefit-item h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.benefit-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.tools-content h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
 }

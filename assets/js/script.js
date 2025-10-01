@@ -12,7 +12,7 @@ class Router {
         this.registerRoute('home', () => this.showSection('home'));
         this.registerRoute('about', () => this.showSection('about'));
         this.registerRoute('offer', () => this.showSection('offer'));
-        this.registerRoute('passion', () => this.showSection('passion'));
+        this.registerRoute('tools', () => this.showSection('tools'));
         this.registerRoute('blog', () => this.showSection('blog'));
         this.registerRoute('contact', () => this.showSection('contact'));
 
@@ -326,7 +326,7 @@ class IntersectionAnimations {
 
         // Observe elements that should animate on scroll
         const animatedElements = document.querySelectorAll(
-            '.service-card, .gallery-item, .work-feature, .team-member, .passion-card'
+            '.service-card, .tool-item, .benefit-item, .work-feature, .team-member'
         );
 
         animatedElements.forEach(element => {
