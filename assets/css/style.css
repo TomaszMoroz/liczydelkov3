@@ -1563,3 +1563,44 @@ html {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(200, 153, 107, 0.4);
 }
+
+/* Coming Soon Section */
+.coming-soon {
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.coming-soon h3 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.coming-soon ul {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.coming-soon li {
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    color: #495057;
+    font-weight: 500;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.coming-soon li::before {
+    content: '→';
+    position: absolute;
+    left: 1rem;
+    color: #c8996b;
+    font-weight: bold;
+}
