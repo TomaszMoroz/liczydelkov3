@@ -9,12 +9,20 @@ class Router {
     // Initialize router
     init() {
         // Register routes
-        this.registerRoute('home', () => this.showSection('home'));
-        this.registerRoute('about', () => this.showSection('about'));
-        this.registerRoute('offer', () => this.showSection('offer'));
-        this.registerRoute('tools', () => this.showSection('tools'));
-        this.registerRoute('blog', () => this.showSection('blog'));
-        this.registerRoute('contact', () => this.showSection('contact'));
+        this.registerRoute('strona-glowna', () => this.showSection('strona-glowna'));
+        this.registerRoute('o-nas', () => this.showSection('o-nas'));
+        this.registerRoute('oferta', () => this.showSection('oferta'));
+        this.registerRoute('korzysci', () => this.showSection('korzysci'));
+        this.registerRoute('dla-ciebie', () => this.showSection('dla-ciebie'));
+        this.registerRoute('kontakt', () => this.showSection('kontakt'));
+        
+        // Backward compatibility
+        this.registerRoute('home', () => this.navigate('strona-glowna'));
+        this.registerRoute('about', () => this.navigate('o-nas'));
+        this.registerRoute('offer', () => this.navigate('oferta'));
+        this.registerRoute('tools', () => this.navigate('korzysci'));
+        this.registerRoute('blog', () => this.navigate('dla-ciebie'));
+        this.registerRoute('contact', () => this.navigate('kontakt'));
 
         // Setup event listeners
         this.setupNavigation();
@@ -44,7 +52,7 @@ class Router {
 
     // Handle current route
     handleRoute() {
-        const hash = window.location.hash.substr(1) || 'home';
+        const hash = window.location.hash.substr(1) || 'strona-glowna';
         if (this.routes[hash]) {
             this.currentRoute = hash;
             this.routes[hash]();
@@ -88,7 +96,7 @@ class Router {
         const ctaButton = document.querySelector('.cta-button');
         if (ctaButton) {
             ctaButton.addEventListener('click', () => {
-                this.navigate('contact');
+                this.navigate('kontakt');
             });
         }
 
@@ -96,8 +104,32 @@ class Router {
         const learnMoreBtn = document.querySelector('.btn-secondary');
         if (learnMoreBtn) {
             learnMoreBtn.addEventListener('click', () => {
-                this.navigate('about');
+                this.navigate('o-nas');
             });
+        }
+
+        // Setup benefits CTA button
+        const benefitsCta = document.querySelector('.btn-primary-large');
+        if (benefitsCta) {
+            benefitsCta.addEventListener('click', () => {
+                this.navigate('kontakt');
+            });
+        }
+
+        // Setup logo click to navigate to home
+        const logo = document.querySelector('.nav-logo');
+        const navBrand = document.querySelector('.nav-brand');
+        if (logo) {
+            logo.addEventListener('click', () => {
+                this.navigate('strona-glowna');
+            });
+            logo.style.cursor = 'pointer';
+        }
+        if (navBrand) {
+            navBrand.addEventListener('click', () => {
+                this.navigate('strona-glowna');
+            });
+            navBrand.style.cursor = 'pointer';
         }
     }
 
@@ -326,7 +358,7 @@ class IntersectionAnimations {
 
         // Observe elements that should animate on scroll
         const animatedElements = document.querySelectorAll(
-            '.service-card, .tool-item, .benefit-item, .work-feature, .team-member'
+            '.service-card, .benefit-card, .benefit-item, .work-feature, .team-member, .detailed-benefit, .stat-item'
         );
 
         animatedElements.forEach(element => {
