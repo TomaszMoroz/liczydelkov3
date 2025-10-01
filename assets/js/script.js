@@ -12,6 +12,7 @@ class Router {
         this.registerRoute('strona-glowna', () => this.showSection('strona-glowna'));
         this.registerRoute('o-nas', () => this.showSection('o-nas'));
         this.registerRoute('oferta', () => this.showSection('oferta'));
+        this.registerRoute('pasje', () => this.showSection('pasje'));
         this.registerRoute('korzysci', () => this.showSection('korzysci'));
         this.registerRoute('dla-ciebie', () => this.showSection('dla-ciebie'));
         this.registerRoute('kontakt', () => this.showSection('kontakt'));
@@ -20,6 +21,7 @@ class Router {
         this.registerRoute('home', () => this.navigate('strona-glowna'));
         this.registerRoute('about', () => this.navigate('o-nas'));
         this.registerRoute('offer', () => this.navigate('oferta'));
+        this.registerRoute('passions', () => this.navigate('pasje'));
         this.registerRoute('tools', () => this.navigate('korzysci'));
         this.registerRoute('blog', () => this.navigate('dla-ciebie'));
         this.registerRoute('contact', () => this.navigate('kontakt'));

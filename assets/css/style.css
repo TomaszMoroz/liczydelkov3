@@ -81,7 +81,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-    color: #c8996b;
+    color: #ff6b35;
 }
 
 .nav-toggle {
@@ -167,7 +167,7 @@ body {
 }
 
 .cta-button {
-    background-color: #c8996b;
+    background: linear-gradient(135deg, #ff6b35, #e55a2b);
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -177,12 +177,13 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
 .cta-button:hover {
-    background-color: #b8895b;
+    background: linear-gradient(135deg, #e55a2b, #d04d20);
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(200, 153, 107, 0.3);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
 }
 
 .hero-image {
@@ -952,12 +953,749 @@ html {
     line-height: 1.6;
 }
 
-/* Benefits Section - Modern UI/UX Design */
-.benefits-section {
-    padding: 6rem 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+/* Passion Section - Professional Business Design */
+.passion-content {
+    margin-top: 40px;
+}
+
+.passion-intro {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 20px rgba(0, 77, 122, 0.08);
+    border: 1px solid #e8f4f8;
+    position: relative;
+}
+
+.passion-intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #004d7a, #0066a0);
+    border-radius: 12px 12px 0 0;
+}
+
+.intro-text h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #004d7a;
+    margin: 0 0 16px 0;
+    line-height: 1.3;
+}
+
+.intro-text p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.7;
+    margin: 0 0 30px 0;
+}
+
+.expertise-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #f0f8ff;
+    border: 1px solid #004d7a20;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    background: #004d7a10;
+    transform: translateY(-1px);
+}
+
+.badge i {
+    color: #004d7a;
+    font-size: 14px;
+}
+
+.badge span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #004d7a;
+}
+
+.passions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
+.passion-card {
+    background: white;
+    border-radius: 12px;
+    padding: 32px 24px;
+    border: 1px solid #e8f4f8;
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    text-align: center;
+}
+
+.passion-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #004d7a;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.passion-card:hover::before {
+    transform: scaleX(1);
+}
+
+.passion-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 77, 122, 0.15);
+    border-color: #004d7a;
+}
+
+.passion-image {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #004d7a, #0066a0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px auto;
+    transition: all 0.3s ease;
+}
+
+.passion-card:hover .passion-image {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 77, 122, 0.3);
+}
+
+.passion-image i {
+    font-size: 32px;
+    color: white;
+}
+
+.passion-content h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #004d7a;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+}
+
+.passion-content p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.passion-cta {
+    background: linear-gradient(135deg, #004d7a, #0066a0);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.passion-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.passion-cta:hover::before {
+    left: 100%;
+}
+
+.cta-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+}
+
+.cta-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+    opacity: 0.9;
+}
+
+.passion-cta .cta-button {
+    background: white;
+    color: #004d7a;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.passion-cta .cta-button:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for Passion Section */
+@media (max-width: 968px) {
+    .passion-intro {
+        padding: 30px;
+    }
+    
+    .intro-text h3 {
+        font-size: 24px;
+    }
+    
+    .expertise-badges {
+        justify-content: center;
+    }
+    
+    .passions-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .passion-card {
+        padding: 28px 20px;
+    }
+    
+    .passion-cta {
+        padding: 32px;
+    }
+    
+    .cta-content h3 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 568px) {
+    .passion-intro {
+        padding: 24px;
+        margin-bottom: 40px;
+    }
+    
+    .intro-text h3 {
+        font-size: 22px;
+    }
+    
+    .expertise-badges {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .badge {
+        width: 100%;
+        justify-content: center;
+        max-width: 280px;
+    }
+    
+    .passions-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .passion-card {
+        padding: 24px 20px;
+    }
+    
+    .passion-image {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .passion-image i {
+        font-size: 24px;
+    }
+    
+    .passion-content h4 {
+        font-size: 18px;
+    }
+    
+    .passion-cta {
+        padding: 24px;
+    }
+    
+    .cta-content h3 {
+        font-size: 20px;
+    }
+    
+    .passion-cta .cta-button {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* Passion Section - Professional Business Design */
+.passion-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+    position: relative;
+}
+
+.passion-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #004d7a, transparent);
+}
+
+.passion-section .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.passion-section .section-header h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #004d7a;
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+}
+
+.passion-section .section-subtitle {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.passion-content {
+    margin-top: 40px;
+}
+
+.passion-intro {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 20px rgba(0, 77, 122, 0.08);
+    border: 1px solid #e8f4f8;
+    position: relative;
+    text-align: center;
+}
+
+.passion-intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #004d7a, #ff6b35, #004d7a);
+    border-radius: 12px 12px 0 0;
+}
+
+.intro-text {
+    text-align: center;
+}
+
+.intro-text h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #004d7a;
+    margin: 0 0 16px 0;
+    line-height: 1.3;
+}
+
+.intro-text p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.7;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.passions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.passion-card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px 30px;
+    border: 1px solid #e8f4f8;
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.passion-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b35, #004d7a);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.passion-card:hover::before {
+    transform: scaleX(1);
+}
+
+.passion-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 77, 122, 0.15);
+    border-color: #ff6b35;
+}
+
+.passion-image {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #ff6b35, #e55a2b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px auto;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.passion-card:hover .passion-image {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+}
+
+.passion-image i {
+    font-size: 32px;
+    color: white;
+}
+
+.passion-content h5 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #004d7a;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+}
+
+.passion-content p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design for Passion Section */
+@media (max-width: 968px) {
+    .passion-section {
+        padding: 60px 0;
+    }
+    
+    .passion-section .section-header h3 {
+        font-size: 32px;
+    }
+    
+    .passion-intro {
+        padding: 30px;
+        margin-bottom: 40px;
+    }
+    
+    .intro-text h4 {
+        font-size: 22px;
+    }
+    
+    .passions-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
+    }
+    
+    .passion-card {
+        padding: 32px 24px;
+    }
+}
+
+@media (max-width: 568px) {
+    .passion-section {
+        padding: 40px 0;
+    }
+    
+    .passion-section .section-header h3 {
+        font-size: 28px;
+    }
+    
+    .passion-section .section-subtitle {
+        font-size: 16px;
+    }
+    
+    .passion-intro {
+        padding: 24px;
+        margin-bottom: 32px;
+    }
+    
+    .intro-text h4 {
+        font-size: 20px;
+    }
+    
+    .passions-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .passion-card {
+        padding: 28px 20px;
+    }
+    
+    .passion-image {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .passion-image i {
+        font-size: 24px;
+    }
+    
+    .passion-content h5 {
+        font-size: 16px;
+    }
+}
+
+/* Detailed Passion Section for SPA routing */
+.passion-detailed {
+    margin-top: 2rem;
+}
+
+.passion-intro-full {
+    background: white;
+    border-radius: 12px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 20px rgba(0, 77, 122, 0.08);
+    border: 1px solid #e8f4f8;
+    position: relative;
+}
+
+.passion-intro-full::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #004d7a, #0066a0);
+    border-radius: 12px 12px 0 0;
+}
+
+.intro-content-wrapper {
+    text-align: center;
+}
+
+.intro-text-full h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #004d7a;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.3;
+}
+
+.intro-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.detailed-passions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.detailed-passion {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    border: 1px solid #e8f4f8;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.detailed-passion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #004d7a;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.detailed-passion:hover::before {
+    transform: scaleX(1);
+}
+
+.detailed-passion:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 77, 122, 0.15);
+    border-color: #004d7a;
+}
+
+.passion-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.passion-header i {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #004d7a, #0066a0);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.detailed-passion:hover .passion-header i {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 77, 122, 0.3);
+}
+
+.passion-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #004d7a;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.passion-description p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design for Detailed Passion Section */
+@media (max-width: 968px) {
+    .passion-intro-full {
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .intro-text-full h2 {
+        font-size: 2rem;
+    }
+    
+    .detailed-passions-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .detailed-passion {
+        padding: 2rem;
+    }
+    
+    .passion-header {
+        gap: 1rem;
+    }
+    
+    .passion-header i {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .passion-header h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 568px) {
+    .passion-intro-full {
+        padding: 1.5rem;
+    }
+    
+    .intro-text-full h2 {
+        font-size: 1.8rem;
+    }
+    
+    .intro-description {
+        font-size: 1rem;
+    }
+    
+    .detailed-passions-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .detailed-passion {
+        padding: 1.5rem;
+    }
+    
+    .passion-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .passion-header i {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        margin: 0 auto;
+    }
+    
+    .passion-header h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Benefits Section - Professional Business Design */
+.benefits-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+    position: relative;
 }
 
 .benefits-section::before {
@@ -966,146 +1704,114 @@ html {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23000000" opacity="0.02"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>') repeat;
-    pointer-events: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ff6b35, #004d7a, #ff6b35, transparent);
 }
 
-.section-header {
-    text-align: center;
-    margin-bottom: 4rem;
-    position: relative;
-    z-index: 2;
+.benefits-container {
+    display: grid;
+    gap: 40px;
+    margin-top: 40px;
 }
 
-.section-header h3 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    position: relative;
-}
-
-.section-header h3::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(45deg, #c8996b, #d4a574);
-    border-radius: 2px;
-}
-
-.section-subtitle {
-    font-size: 1.2rem;
-    color: #6c757d;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-
-.benefits-hero {
-    margin-bottom: 4rem;
-    position: relative;
-    z-index: 2;
-}
-
-.hero-benefit {
+/* Primary Benefit - Main Feature */
+.primary-benefit {
     background: white;
-    border-radius: 20px;
-    padding: 3rem;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 77, 122, 0.1);
+    border: 1px solid #e8f4f8;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+    align-items: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero-benefit::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 100%;
-    background: linear-gradient(45deg, #c8996b, #d4a574);
+.primary-benefit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 77, 122, 0.15);
 }
 
-.hero-benefit-icon {
-    background: linear-gradient(45deg, #c8996b, #d4a574);
+.benefit-icon {
     width: 80px;
     height: 80px;
-    border-radius: 20px;
+    background: linear-gradient(135deg, #ff6b35, #004d7a);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    box-shadow: 0 5px 20px rgba(200, 153, 107, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
-.hero-benefit-icon i {
-    font-size: 2rem;
+.benefit-icon i {
+    font-size: 32px;
     color: white;
 }
 
-.hero-benefit-content h4 {
-    font-size: 1.8rem;
-    color: #2c3e50;
-    margin-bottom: 1rem;
+.benefit-content h4 {
+    font-size: 24px;
     font-weight: 600;
+    color: #004d7a;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
 }
 
-.hero-benefit-content > p {
-    font-size: 1.1rem;
-    color: #6c757d;
+.benefit-content p {
+    font-size: 16px;
+    color: #666;
+    margin: 0 0 24px 0;
     line-height: 1.6;
-    margin-bottom: 2rem;
 }
 
 .benefit-features {
-    list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
+    gap: 12px;
 }
 
-.benefit-features li {
+.feature-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    color: #495057;
+    gap: 12px;
+    padding: 8px 0;
+}
+
+.feature-item i {
+    width: 20px;
+    height: 20px;
+    background: #004d7a;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    flex-shrink: 0;
+}
+
+.feature-item span {
+    font-size: 15px;
+    color: #333;
     font-weight: 500;
 }
 
-.benefit-features i {
-    color: #28a745;
-    font-size: 0.9rem;
-}
-
-.benefits-grid {
+/* Secondary Benefits Grid */
+.secondary-benefits {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
-    position: relative;
-    z-index: 2;
+    gap: 24px;
+    margin-top: 20px;
 }
 
 .benefit-card {
     background: white;
-    border-radius: 16px;
-    padding: 2.5rem;
-    text-align: center;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    padding: 30px 24px;
+    border: 1px solid #e8f4f8;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    border: 1px solid #f1f3f4;
 }
 
 .benefit-card::before {
@@ -1114,109 +1820,173 @@ html {
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: linear-gradient(45deg, #c8996b, #d4a574);
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b35, #004d7a);
     transform: scaleX(0);
     transition: transform 0.3s ease;
-}
-
-.benefit-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
 .benefit-card:hover::before {
     transform: scaleX(1);
 }
 
-.card-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 12px;
+.benefit-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 107, 53, 0.12);
+    border-color: #ff6b35;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.card-header i {
+    width: 48px;
+    height: 48px;
+    background: #f0f8ff;
+    color: #004d7a;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
-    transition: transform 0.3s ease;
+    font-size: 20px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
 }
 
-.benefit-card:hover .card-icon {
+.benefit-card:hover .card-header i {
+    background: #ff6b35;
+    color: white;
     transform: scale(1.1);
 }
 
-.card-primary .card-icon {
-    background: linear-gradient(45deg, #007bff, #0056b3);
-    color: white;
-}
-
-.card-secondary .card-icon {
-    background: linear-gradient(45deg, #28a745, #1e7e34);
-    color: white;
-}
-
-.card-accent .card-icon {
-    background: linear-gradient(45deg, #ffc107, #e0a800);
-    color: #212529;
-}
-
-.card-premium .card-icon {
-    background: linear-gradient(45deg, #6f42c1, #5a2d91);
-    color: white;
-}
-
-.benefit-card h4 {
-    font-size: 1.3rem;
-    color: #2c3e50;
-    margin-bottom: 1rem;
+.card-header h5 {
+    font-size: 18px;
     font-weight: 600;
+    color: #004d7a;
+    margin: 0;
 }
 
 .benefit-card p {
-    color: #6c757d;
+    font-size: 15px;
+    color: #666;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
+    margin: 0;
 }
 
-.card-highlight {
-    background: linear-gradient(45deg, #c8996b, #d4a574);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    display: inline-block;
-}
-
-.benefits-stats {
+/* Key Stats */
+.key-stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    background: white;
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-    position: relative;
-    z-index: 2;
+    gap: 24px;
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid #e8f4f8;
 }
 
-.stat-item {
+.stat-card {
     text-align: center;
+    padding: 24px 16px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e8f4f8;
+    transition: all 0.3s ease;
 }
 
-.stat-number {
-    font-size: 3rem;
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 77, 122, 0.1);
+}
+
+.stat-value {
+    font-size: 28px;
     font-weight: 700;
-    color: #c8996b;
-    line-height: 1;
-    margin-bottom: 0.5rem;
+    color: #004d7a;
+    line-height: 1.2;
+    margin-bottom: 8px;
 }
 
 .stat-label {
-    color: #6c757d;
+    font-size: 14px;
+    color: #666;
     font-weight: 500;
     text-transform: uppercase;
-    font-size: 0.9rem;
     letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .benefits-section {
+        padding: 60px 0;
+    }
+    
+    .primary-benefit {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .benefit-content h4 {
+        font-size: 22px;
+    }
+    
+    .secondary-benefits {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .key-stats {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 16px;
+    }
+}
+
+@media (max-width: 568px) {
+    .benefits-section {
+        padding: 40px 0;
+    }
+    
+    .primary-benefit {
+        padding: 24px;
+    }
+    
+    .benefit-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .benefit-icon i {
+        font-size: 24px;
+    }
+    
+    .benefit-content h4 {
+        font-size: 20px;
+    }
+    
+    .secondary-benefits {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefit-card {
+        padding: 24px 20px;
+    }
+    
+    .card-header i {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .key-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stat-value {
+        font-size: 24px;
+    }
 }
 
 /* Benefits Section */
