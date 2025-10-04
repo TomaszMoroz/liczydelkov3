@@ -311,6 +311,11 @@ body {
     border: 2px solid #e9ecef;
 }
 
+/* Specific positioning for boat image - show from top edge */
+.team-img[src*="boat.jpg"] {
+    object-position: center top;
+}
+
 .team-img:hover {
     transform: translateY(-5px);
     border-color: #ff6b35;
